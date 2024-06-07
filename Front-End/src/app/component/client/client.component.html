@@ -1,0 +1,200 @@
+<form
+  #inviaClientrForm="ngForm"
+  (ngSubmit)="inviaCliente(inviaClientrForm)"
+  class="row g-3"
+>
+  <div class="col-md-4">
+    <label for="societyName" class="form-label"
+      >Society Name</label
+    >
+    <input
+      type="text"
+      name="societyName"
+      class="form-control"
+      id="societyName"
+      required
+      ngModel
+    />
+    <div class="invalid-feedback">Please provide a valid society name.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="clientType" class="form-label"
+      >Client Type</label
+    >
+    <select
+      class="form-select"
+      name="clientType"
+      id="clientType"
+      aria-describedby="validationServerClientTypeFeedback"
+      required
+      ngModel
+    >
+      <option selected disabled value="">Choose...</option>
+      <option value="PA">PA</option>
+      <option value="SA">SA</option>
+      <option value="SPA">SPA</option>
+      <option value="SRL">SRL</option>
+    </select>
+    <div id="clientType" class="invalid-feedback">
+      Please select a valid client type.
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="vat" class="form-label">VAT</label>
+    <input
+      type="text"
+      name="vat"
+      class="form-control is-invalid"
+      id="vat"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid VAT number.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="email" class="form-label">Email</label>
+    <input
+      type="email"
+      name="email"
+      class="form-control is-invalid"
+      id="email"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid email.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="addDate" class="form-label">Add Date</label>
+    <input
+      type="date"
+      name="addDate"
+      class="form-control is-invalid"
+      id="addDate"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid date.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="lastContact" class="form-label"
+      >Last Contact</label
+    >
+    <input
+      type="date"
+      name="lastContact"
+      class="form-control is-invalid"
+      id="lastContact"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid date.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="totalSales" class="form-label"
+      >Total Sales</label
+    >
+    <input
+      type="number"
+      step="0.01"
+      class="form-control is-invalid"
+      name="totalSales"
+      id="totalSales"
+      required
+    />
+    <div class="invalid-feedback">
+      Please provide a valid total sales amount.
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="pec" class="form-label">PEC</label>
+    <input
+      type="email"
+      name="pec"
+      class="form-control is-invalid"
+      id="pec"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid PEC.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="phoneNumber" class="form-label"
+      >Phone Number</label
+    >
+    <input
+      type="tel"
+      class="form-control is-invalid"
+      id="phoneNumber"
+      name="phoneNumber"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid phone number.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="contactEmail" class="form-label"
+      >Contact Email</label
+    >
+    <input
+      type="email"
+      class="form-control is-invalid"
+      id="contactEmail"
+      name="contactEmail"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid contact email.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="contactName" class="form-label"
+      >Contact Name</label
+    >
+    <input
+      type="text"
+      class="form-control is-invalid"
+      id="contactName"
+      name="contactName"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid contact name.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="contactSurname" class="form-label"
+      >Contact Surname</label
+    >
+    <input
+      type="text"
+      class="form-control is-invalid"
+      id="contactSurname"
+      name="contactSurname"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid contact surname.</div>
+  </div>
+  <div class="col-md-6">
+    <label for="contactPhone" class="form-label"
+      >Contact Phone</label
+    >
+    <input
+      type="tel"
+      class="form-control is-invalid"
+      id="contactPhone"
+      name="contactPhone"
+      required
+    />
+    <div class="invalid-feedback">
+      Please provide a valid contact phone number.
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="societyLogo" class="form-label"
+      >Society Logo</label
+    >
+    <input
+      type="file"
+      class="form-control is-invalid"
+      id="societyLogo"
+      name="societyLogo"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid logo.</div>
+  </div>
+  <div class="col-12">
+    <button id="btnSubmit" class="btn btn-primary rounded-5" type="submit">
+      Submit form
+    </button>
+  </div>
+</form>
